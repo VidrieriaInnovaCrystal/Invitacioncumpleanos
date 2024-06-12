@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Cumpleaños</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="invitation-container">
+        <h1 class="title">¡Estás Invitado!</h1>
+        <p class="description">Ven a celebrar mi cumpleaños el <strong>15 de julio</strong> a las <strong>6:00 PM</strong>.</p>
+        <p class="description">La fiesta será en <strong>123 Calle Fiesta, Ciudad Cumpleaños</strong>.</p>
+        <button class="location-button" onclick="redirectToLocation()">Ver Ubicación</button>
+    </div>
+
+    <script>
+        function redirectToLocation() {
+            const address = "123 Calle Fiesta, Ciudad Cumpleaños";
+            const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+            window.location.href = googleMapsUrl;
+        }
+    </script>
+</body>
+</html>
